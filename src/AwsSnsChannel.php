@@ -30,7 +30,7 @@ class AwsSnsChannel
    */
   public function send($notifiable, Notification $notification)
   {
-    if (!method_exists($notifiable, 'getSmsPhoneNumber') || (($phoneNumber = $notifiable->getSmsPhoneNumber()) === null) {
+    if (!method_exists($notifiable, 'getSmsPhoneNumber') || (($phoneNumber = $notifiable->getSmsPhoneNumber()) === null)) {
       return;
     }
     
