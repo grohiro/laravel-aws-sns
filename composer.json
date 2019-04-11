@@ -1,0 +1,8 @@
+{
+    "name": "grohiro/laravel-aws-sns",
+    "type": "laravel-library",
+    "license": "MIT",
+    "require": {
+        "aws/aws-sdk-php": "^3.91"
+    }
+}
