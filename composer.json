@@ -2,7 +2,23 @@
     "name": "grohiro/laravel-aws-sns",
     "type": "laravel-library",
     "license": "MIT",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "grohiro",
+            "email": "khirokawa@growk.jp"
+        }
+    ],
     "require": {
         "aws/aws-sdk-php": "^3.91"
+    },
+    "require-dev": {
+        "laravel/laravel": "^5.5",
+        "phpunit/phpunit": "^6.5"
+    },
+    "autoload": {
+      "psr-4": {
+        "Grohiro\\Laravel\\AwsSns\\": "src"
+      }
     }
 }
