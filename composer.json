@@ -10,11 +10,11 @@
         }
     ],
     "require": {
-        "aws/aws-sdk-php": "^3.91"
+        "aws/aws-sdk-php": "^3"
     },
     "require-dev": {
-        "laravel/laravel": "^5.5",
-        "phpunit/phpunit": "^6.5"
+        "laravel/laravel": "^5",
+        "phpunit/phpunit": "^6"
     },
     "autoload": {
       "psr-4": {
