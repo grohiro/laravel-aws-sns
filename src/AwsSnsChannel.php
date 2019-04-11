@@ -30,10 +30,14 @@ class AwsSnsChannel
    */
   public function send($notifiable, Notification $notification)
   {
+    if (!method_exists($notifiable, 'getSmsPhoneNumber') || (($phoneNumber = $notifiable->getSmsPhoneNumber()) === null) {
+      return;
+    }
+    
     $args = [
       "SMSType" => "Transational",
       "Message" => "Hello, world!",
-      "PhoneNumber" => $notifiable->getSmsPhoneNumber(),
+      "PhoneNumber" => $phoneNumber,
     ];
 
     $result = $this->client->publish($args);
