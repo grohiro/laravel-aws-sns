@@ -36,7 +36,8 @@ class AwsSnsChannel
     
     $args = [
       "SMSType" => "Transational",
-      "Message" => "Hello, world!",
+      "Message" => $notification->toSmsMessage(),
+      "Subject" => $notification->toSmsSubject(),
       "PhoneNumber" => $phoneNumber,
     ];
 
