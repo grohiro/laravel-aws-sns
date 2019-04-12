@@ -41,7 +41,8 @@ class AwsSnsChannel
       "PhoneNumber" => $phoneNumber,
     ];
 
+    Log::info(sprintf("AWS SMS: %s %s", $args['Subject'], $args['Message']));
     $result = $this->client->publish($args);
-    Log::debug($result);
+    return $result;
   }
 }
